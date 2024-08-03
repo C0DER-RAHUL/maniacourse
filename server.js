@@ -4,8 +4,11 @@ import cloudinary from "cloudinary";
 import nodeCron from "node-cron";
 import { Stats } from "./models/Stats.js";
 
+connectDB().then(() => {
+  // Start your server or application logic here
+});
 
-connectDB();
+// connectDB();
 
 cloudinary.v2.config({
     cloud_name: process.env.CLOUDINARY_CLIENT_NAME,
